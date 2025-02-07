@@ -81,49 +81,67 @@ header nav ul li a:hover {
     }
 }
 
-/* HOME SECTION */
+/* First Part: Home Image and Description */
 #home {
     display: flex;
-    flex-wrap: wrap;
+    justify-content: center;
     align-items: center;
     padding: 40px;
-    background-color: #EAD7C3; /* Keep existing color */
-    text-align: center;
+    background-color: #EAD7C3;
+}
+
+.home-content {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
 }
 
 .home-image {
     flex: 1;
-    display: flex;
-    justify-content: center;
+    margin-right: 20px; /* Space between image and text */
+    position: relative;
 }
 
-.home-image img {
-    width: 100%;
-    max-width: 300px;
+.home-img {
+    width: 70%; /* Make the image smaller */
+    height: auto;
     border-radius: 10px;
+    display: block;
+    margin: 0 auto; /* Center the image */
 }
 
 .home-description {
     flex: 1;
+    text-align: center;
     padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
-/* BUTTONS */
+.home-description p {
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
 .learn-more-btn {
     display: inline-block;
     padding: 12px 20px;
-    background-color: #333;
-    color: #FBF6EF;
+    background-color: #333; /* Make the button color more contrasting */
+    color: #FBF6EF; /* White color text for contrast */
     font-size: 16px;
     font-weight: 600;
     text-transform: uppercase;
     border-radius: 5px;
+    border: 1px solid #DCE0D9;
     transition: background-color 0.3s;
 }
 
 .learn-more-btn:hover {
-    background-color: #EAD7C3;
+    background-color: #EAD7C3; /* Change to a lighter color on hover */
 }
+
 
 /* CATEGORIES */
 #categories {
