@@ -1,0 +1,265 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: #FBF6EF;
+    color: #333;
+}
+
+a {
+    text-decoration: none;
+    color: #333;
+}
+
+/* Header Styles */
+header {
+    background-color: #DCE0D9; /* Light background color for elegance */
+    padding: 10px 30px; /* Add some spacing */
+    display: flex; /* Use flexbox */
+    justify-content: space-between; /* Logo on the left, nav on the right */
+    align-items: center; /* Align items vertically */
+}
+
+/* Logo Styling */
+header .logo img {
+    width: 75px;  /* Adjust width of your logo */
+    height: 75px; /* Adjust height of your logo */
+    object-fit: cover; /* Crop the image */
+    object-position: center; /* Ensure focus on center */
+}
+
+/* Navigation */
+header nav {
+    display: flex;
+    align-items: center;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+header nav ul li {
+    margin: 0 20px;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+header nav ul li a:hover {
+    color: #EAD7C3; /* Hover effect */
+}
+
+
+/* First Part: Home Image and Description */
+#home {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+    background-color: #EAD7C3;
+}
+
+.home-content {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+}
+
+.home-image {
+    flex: 1;
+    margin-right: 20px;
+    position: relative;
+}
+
+.home-img {
+    width: 70%; /* Make the image smaller */
+    height: auto;
+    border-radius: 10px;
+    display: block;
+    margin: 0 auto; /* Center the image */
+}
+
+.home-description {
+    flex: 1;
+    text-align: center;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.home-description p {
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.learn-more-btn {
+    display: inline-block;
+    padding: 12px 20px;
+    background-color: #333; /* Make the button color more contrasting */
+    color: #FBF6EF; /* White color text for contrast */
+    font-size: 16px;
+    font-weight: 600;
+    text-transform: uppercase;
+    border-radius: 5px;
+    border: 1px solid #DCE0D9;
+    transition: background-color 0.3s;
+}
+
+.learn-more-btn:hover {
+    background-color: #EAD7C3; /* Change to a lighter color on hover */
+}
+
+
+/* Second Part: Category Buttons */
+#categories {
+    display: flex;
+    justify-content: space-around;
+    padding: 40px 20px;
+    background-color: #DCE0D9;
+}
+
+.category {
+    text-align: center;
+}
+
+.category-image {
+    width: 200px;
+    height: 200px;
+    margin-bottom: 10px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.category-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.category h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 18px;
+    font-weight: 700;
+    color: #333;
+}
+
+.category h3 a {
+    color: #333;
+}
+
+.category h3 a:hover {
+    color: #EAD7C3;
+}
+
+/* Third Part: Recent Posts and Pinterest Feed */
+#recent-pins {
+    display: flex;
+    justify-content: space-between;
+    padding: 40px;
+    background-color: #FBF6EF;
+}
+
+.recent-posts {
+    width: 48%;
+    background-color: #DCE0D9;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.recent-posts h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.recent-posts article {
+    margin-bottom: 20px;
+}
+
+.recent-posts h3 {
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.recent-posts p {
+    font-size: 16px;
+}
+
+.pinterest-feed {
+    width: 48%;
+    background-color: #EAD7C3;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.pinterest-images {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+
+.pinterest-images img {
+    width: 100%;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+/* Footer */
+footer {
+    padding: 20px;
+    background-color: #DCE0D9;
+    text-align: center;
+}
+
+footer .footer-links ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    margin-bottom: 20px;
+}
+
+footer .footer-links ul li {
+    margin-left: 20px;
+}
+
+footer .footer-links ul li a {
+    font-size: 16px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+footer p {
+    font-size: 14px;
+    color: #333;
+}
+
+/* Buttons */
+.btn {
+    display: inline-block;
+    padding: 12px 20px;
+    background-color: #EAD7C3;
+    color: #333;
+    font-size: 16px;
+    font-weight: 600;
+    text-transform: uppercase;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+.btn:hover {
+    background-color: #DCE0D9;
+}
