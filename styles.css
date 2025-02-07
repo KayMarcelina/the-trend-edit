@@ -16,24 +16,25 @@ a {
     color: #333;
 }
 
-/* Header Styles */
+/* HEADER */
 header {
-    background-color: #DCE0D9; /* Light background color for elegance */
-    padding: 10px 30px; /* Add some spacing */
-    display: flex; /* Use flexbox */
-    justify-content: space-between; /* Logo on the left, nav on the right */
-    align-items: center; /* Align items vertically */
+    background-color: #DCE0D9; /* Keep existing color */
+    padding: 10px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
 }
 
-/* Logo Styling */
+/* LOGO */
 header .logo img {
-    width: 75px;  /* Adjust width of your logo */
-    height: 75px; /* Adjust height of your logo */
-    object-fit: cover; /* Crop the image */
-    object-position: center; /* Ensure focus on center */
+    width: 75px;
+    height: 75px;
+    object-fit: cover;
+    object-position: center;
 }
 
-/* Navigation */
+/* NAVIGATION */
 header nav {
     display: flex;
     align-items: center;
@@ -47,7 +48,7 @@ header nav ul {
 }
 
 header nav ul li {
-    margin: 0 20px;
+    margin: 0 15px;
 }
 
 header nav ul li a {
@@ -59,207 +60,122 @@ header nav ul li a {
 }
 
 header nav ul li a:hover {
-    color: #EAD7C3; /* Hover effect */
+    color: #EAD7C3;
 }
 
+/* MOBILE NAVIGATION */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+        padding: 15px;
+    }
 
-/* First Part: Home Image and Description */
+    header nav ul {
+        flex-direction: column;
+        padding-top: 10px;
+    }
+
+    header nav ul li {
+        margin: 10px 0;
+    }
+}
+
+/* HOME SECTION */
 #home {
     display: flex;
-    justify-content: center;
+    flex-wrap: wrap;
     align-items: center;
     padding: 40px;
-    background-color: #EAD7C3;
-}
-
-.home-content {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    width: 100%;
+    background-color: #EAD7C3; /* Keep existing color */
+    text-align: center;
 }
 
 .home-image {
     flex: 1;
-    margin-right: 20px;
-    position: relative;
+    display: flex;
+    justify-content: center;
 }
 
-.home-img {
-    width: 70%; /* Make the image smaller */
-    height: auto;
+.home-image img {
+    width: 100%;
+    max-width: 300px;
     border-radius: 10px;
-    display: block;
-    margin: 0 auto; /* Center the image */
 }
 
 .home-description {
     flex: 1;
-    text-align: center;
     padding: 20px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
 }
 
-.home-description p {
-    font-size: 16px;
-    margin-bottom: 20px;
-}
-
+/* BUTTONS */
 .learn-more-btn {
     display: inline-block;
     padding: 12px 20px;
-    background-color: #333; /* Make the button color more contrasting */
-    color: #FBF6EF; /* White color text for contrast */
+    background-color: #333;
+    color: #FBF6EF;
     font-size: 16px;
     font-weight: 600;
     text-transform: uppercase;
     border-radius: 5px;
-    border: 1px solid #DCE0D9;
     transition: background-color 0.3s;
 }
 
 .learn-more-btn:hover {
-    background-color: #EAD7C3; /* Change to a lighter color on hover */
+    background-color: #EAD7C3;
 }
 
-
-/* Second Part: Category Buttons */
+/* CATEGORIES */
 #categories {
     display: flex;
-    justify-content: space-around;
-    padding: 40px 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 40px;
     background-color: #DCE0D9;
 }
 
 .category {
     text-align: center;
+    width: 30%;
 }
 
-.category-image {
-    width: 200px;
-    height: 200px;
-    margin-bottom: 10px;
+.category img {
+    width: 100px;
+    height: 100px;
     border-radius: 50%;
-    overflow: hidden;
 }
 
-.category-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+@media (max-width: 768px) {
+    .category {
+        width: 100%;
+    }
 }
 
-.category h3 {
-    font-family: 'Playfair Display', serif;
-    font-size: 18px;
-    font-weight: 700;
-    color: #333;
-}
-
-.category h3 a {
-    color: #333;
-}
-
-.category h3 a:hover {
-    color: #EAD7C3;
-}
-
-/* Third Part: Recent Posts and Pinterest Feed */
-#recent-pins {
-    display: flex;
-    justify-content: space-between;
-    padding: 40px;
-    background-color: #FBF6EF;
-}
-
-.recent-posts {
-    width: 48%;
-    background-color: #DCE0D9;
-    padding: 20px;
-    border-radius: 10px;
-}
-
-.recent-posts h2 {
-    font-size: 24px;
-    margin-bottom: 20px;
-}
-
-.recent-posts article {
-    margin-bottom: 20px;
-}
-
-.recent-posts h3 {
-    font-size: 20px;
-    font-weight: 700;
-}
-
-.recent-posts p {
-    font-size: 16px;
-}
-
-.pinterest-feed {
-    width: 48%;
-    background-color: #EAD7C3;
-    padding: 20px;
-    border-radius: 10px;
-}
-
-.pinterest-images {
+/* GRID FIX FOR IMAGES */
+.image-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     gap: 10px;
 }
 
-.pinterest-images img {
+.image-grid img {
     width: 100%;
+    height: auto;
     border-radius: 10px;
-    object-fit: cover;
 }
 
-/* Footer */
+/* RESPONSIVE GRID */
+@media (max-width: 768px) {
+    .image-grid {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+/* FOOTER */
 footer {
+    text-align: center;
     padding: 20px;
     background-color: #DCE0D9;
-    text-align: center;
-}
-
-footer .footer-links ul {
-    display: flex;
-    justify-content: center;
-    list-style: none;
-    margin-bottom: 20px;
-}
-
-footer .footer-links ul li {
-    margin-left: 20px;
-}
-
-footer .footer-links ul li a {
-    font-size: 16px;
-    font-weight: 600;
-    text-transform: uppercase;
-}
-
-footer p {
-    font-size: 14px;
     color: #333;
-}
-
-/* Buttons */
-.btn {
-    display: inline-block;
-    padding: 12px 20px;
-    background-color: #EAD7C3;
-    color: #333;
-    font-size: 16px;
-    font-weight: 600;
-    text-transform: uppercase;
-    border-radius: 5px;
-    margin-top: 20px;
-}
-
-.btn:hover {
-    background-color: #DCE0D9;
 }
