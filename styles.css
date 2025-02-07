@@ -172,10 +172,136 @@ header nav ul li a:hover {
     }
 }
 
+/* RECENT POSTS & PINTEREST FEED */
+#recent-pins {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 40px;
+    background-color: #FBF6EF; /* Keep existing color */
+    flex-wrap: wrap;
+}
+
+/* RECENT POSTS */
+.recent-posts {
+    flex: 1;
+    background-color: #DCE0D9;
+    padding: 20px;
+    border-radius: 10px;
+    min-width: 300px;
+}
+
+.recent-posts h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.recent-posts article {
+    margin-bottom: 20px;
+}
+
+.recent-posts h3 {
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.recent-posts p {
+    font-size: 16px;
+}
+
+/* PINTEREST FEED */
+.pinterest-feed {
+    flex: 1;
+    background-color: #EAD7C3;
+    padding: 20px;
+    border-radius: 10px;
+    min-width: 300px;
+}
+
+/* GRID FOR PINTEREST IMAGES */
+.pinterest-images {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+
+.pinterest-images img {
+    width: 100%;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+/* RESPONSIVE FIX */
+@media (max-width: 768px) {
+    #recent-pins {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .recent-posts, .pinterest-feed {
+        width: 100%;
+        text-align: center;
+    }
+
+    .pinterest-images {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .pinterest-images {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
 /* FOOTER */
 footer {
-    text-align: center;
     padding: 20px;
-    background-color: #DCE0D9;
+    background-color: #DCE0D9; /* Keep your existing color */
+    text-align: center;
+}
+
+/* FOOTER LINKS */
+.footer-links ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+    margin-bottom: 20px;
+    flex-wrap: wrap; /* Ensures links don't overflow on smaller screens */
+}
+
+.footer-links ul li {
+    margin: 5px 15px; /* Adjust spacing */
+}
+
+.footer-links ul li a {
+    font-size: 16px;
+    font-weight: 600;
+    text-transform: uppercase;
     color: #333;
+    transition: color 0.3s;
+}
+
+.footer-links ul li a:hover {
+    color: #EAD7C3; /* Hover effect */
+}
+
+/* FOOTER TEXT */
+footer p {
+    font-size: 14px;
+    color: #333;
+    margin-top: 10px;
+}
+
+/* RESPONSIVE FOOTER FIX */
+@media (max-width: 768px) {
+    .footer-links ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-links ul li {
+        margin: 8px 0;
+    }
 }
